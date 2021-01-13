@@ -42,13 +42,13 @@ const PokemonList = (props) => {
       return <p>{pokemonList.errorMsg}</p>;
     }
 
-    return <p>unable to get data</p>;
+    return <p>Unable to get data</p>;
   };
 
   return (
     <div>
       <div className={"search-wrapper"}>
-        <p>Search: </p>
+        <p>Find your Pokemon: </p>
         <input type="text" onChange={(e) => setSearch(e.target.value)} />
         <button
           className={"search-btn"}
