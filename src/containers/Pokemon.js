@@ -38,6 +38,12 @@ const Pokemon = (props) => {
               return <p key={ability.name}>{ability.name}</p>;
             })}
           </div>
+          <div className="pokemon-item">
+            <h1>Type</h1>
+            {pokeData.types.map(({ type }) => {
+              return <p key={type.name}>{type.name}</p>;
+            })}
+          </div>
         </div>
       );
     }
