@@ -1,6 +1,65 @@
 # POKEMON APP
 
+## Table of contents
+
+- [DEMO](#demo)
+- [Description](#description)
+- [How to use](#how-to-use)
+- [Technologies and methodologies used](#technologies-and-methodologies-used)
+- [API](#api)
+- [What I plan to do next: ](#what-i-plan-to-do-next)
+- [Available Scripts](#available-scripts)
+    - [npm start](#npm-start)
+    - [npm run build](#npm-run-build)
+    - [npm run eject](#npm-run-eject)
+
+## DEMO
+
+https://sendersk.github.io/pokemon-app-react/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Description
+
+Application allows to browse pokemons based on external API, which is implemented with use of Axios. The application is constantly develop. New features described in [What I plan to do next](#what-i-plan-to-do-next) will appear soon.
+
+## How to use
+
+1. Write the Pokemon name in Search field or choose one from list below by clicking **View**.
+2. Click on the button **Search**.
+3. If the pokemon you are looking for exists you will get the details.
+4. Details will be shown on the dedicated page.
+5. To go back to the home page click the **Home** button. 
+
+## Technologies and methodologies used
+
+- React
+- create-react-app
+- Redux with react-redux
+- React Router Dom
+- React Paginate
+- Redux Thunk
+- Axios
+- Lodash
+- Hooks
+- HTML
+- CSS
+- JavaScript ES6+
+- npm
+
+## API
+
+All the Pokemon data are coming from:
+https://pokeapi.co/
+
+## What I plan to do next: 
+
+- Rebuild project using styled components.
+- Add search filter.
+- Save data in localStorage.
+- Adapt project to Responsive Web Design.
+- Improve app appearance.
+- Create a live preview.
 
 ## Available Scripts
 
@@ -13,11 +72,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
