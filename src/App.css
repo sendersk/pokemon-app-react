@@ -2,12 +2,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 *,
 ::after,
 ::before {
   box-sizing: inherit;
+}
+
+.container {
+  background-color: lightskyblue;
+  height: 100%;
 }
 
 nav {
@@ -39,7 +45,7 @@ nav a:hover {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   padding: 10px;
 }
@@ -49,6 +55,11 @@ nav a:hover {
   display: flex;
   height: 50px;
   justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: royalblue;
+  background-color: #fff;
   border: 2px solid royalblue;
   padding: 10px;
   border-radius: 7px;
@@ -61,11 +72,14 @@ nav a:hover {
 
 .pokemon {
   width: 90%;
-  margin: auto;
+  margin: 20px auto 0;
+  height: 90vh;
 }
 
 .pokemon-header {
+  font-size: 50px;
   padding: 10px;
+  margin-bottom: 40px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -75,11 +89,17 @@ nav a:hover {
 .pokemon-wrapper {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-around;
 }
 
 .pokemon-wrapper .pokemon-item {
-  width: 30%;
+  width: 45%;
+  padding: 10px;
+  background-color: #fff;
+  border: 3px solid royalblue;
+  border-radius: 10px;
 }
 
 .search-wrapper {
@@ -94,18 +114,24 @@ nav a:hover {
   gap: 20px;
 }
 
+.search-paragraph {
+  color: #555;
+  font-size: 30px;
+  font-weight: 700;
+}
+
 .search-input {
   line-height: 1.5;
   font-size: 20px;
   padding: 5px;
-  border: 3px solid royalblue;
+  border: 3px solid #777;
 }
 
 .search-btn {
   display: inline-block;
-  color: royalblue;
-  background-color: #fff;
-  border: 3px solid royalblue;
+  color: #fff;
+  background-color: royalblue;
+  border: none;
   border-radius: 20px;
   font-size: 1em;
   text-align: center;
@@ -121,4 +147,7 @@ nav a:hover {
   list-style: none;
   justify-content: space-between;
   padding: 25px;
+  color: #555;
+  font-size: 16px;
+  font-weight: 600;
 }
