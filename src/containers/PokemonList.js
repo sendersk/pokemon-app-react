@@ -45,6 +45,12 @@ const PokemonList = (props) => {
     return <p>Unable to get data</p>;
   };
 
+  const handleSearchInputKeyPress = (e) => {
+    if (e.key === "Enter") {
+      props.history.push(`/pokemon/${search}`)
+    }
+  };
+
   return (
     <div className="container">
       <div className={"search-wrapper"}>
@@ -52,6 +58,7 @@ const PokemonList = (props) => {
         <input
           className={"search-input"}
           type="text"
+          onKeyPress={handleSearchInputKeyPress}
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder={"Search..."}
         />
