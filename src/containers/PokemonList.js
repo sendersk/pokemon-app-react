@@ -47,7 +47,7 @@ const PokemonList = (props) => {
 
   const handleSearchInputKeyPress = (e) => {
     if (e.key === "Enter") {
-      props.history.push(`/pokemon/${search}`)
+      props.history.push(`/pokemon/${search}`);
     }
   };
 
