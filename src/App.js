@@ -4,10 +4,11 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import PokemonList from "./containers/PokemonList/PokemonList";
 import Pokemon from "./containers/Pokemon/Pokemon";
 import {Navigation, NavigationLink} from "./common/Navigation/styled"
+import {Container} from "./common/Container/styled"
 
 function App() {
   return (
-    <div className="container">
+    <Container>
       <Navigation>
         <NavigationLink to={"/"}>Home</NavigationLink>
       </Navigation>
@@ -16,7 +17,7 @@ function App() {
         <Route path={"/pokemon/:pokemon"} exact component={Pokemon} />
         <Redirect to={"/"} />
       </Switch>
-    </div>
+    </Container>
   );
 }
 
