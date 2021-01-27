@@ -10,6 +10,15 @@ export const ListWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   padding: 10px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const ListItem = styled.div`
