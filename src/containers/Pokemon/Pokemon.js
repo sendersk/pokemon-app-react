@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetPokemon } from "../../actions/PokemonActions";
 import _ from "lodash";
-import {Wrapper, Item, PokemonWrapper} from "./styled"
+import {Wrapper, Item, PokemonWrapper, PokemonHeader} from "./styled"
 
 const Pokemon = (props) => {
   const pokemonName = props.match.params.pokemon;
@@ -62,7 +62,7 @@ const Pokemon = (props) => {
 
   return (
     <PokemonWrapper>
-      <h1 className="pokemon-header">{pokemonName}</h1>
+      <PokemonHeader>{pokemonName}</PokemonHeader>
       {ShowData()}
     </PokemonWrapper>
   );

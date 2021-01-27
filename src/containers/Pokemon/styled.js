@@ -20,4 +20,14 @@ export const PokemonWrapper = styled.div`
   width: 90%;
   margin: 20px auto 0;
   height: 90vh;
-`
+`;
+
+export const PokemonHeader = styled.h1`
+  font-size: 50px;
+  padding: 10px;
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+`;
