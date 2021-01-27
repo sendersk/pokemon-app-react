@@ -5,7 +5,7 @@ import { GetPokemonList } from "../../actions/PokemonActions";
 import ReactPaginate from "react-paginate";
 import {ListWrapper, ListItem, ListLink} from "./styled"
 import {Container} from "../../common/Container/styled"
-import {SearchWrapper, SearchParagraph} from "../Search/styled"
+import {SearchWrapper, SearchParagraph, SearchInput, SearchButton} from "../Search/styled"
 
 const PokemonList = (props) => {
   const [search, setSearch] = useState("");
@@ -57,19 +57,19 @@ const PokemonList = (props) => {
     <Container>
       <SearchWrapper>
         <SearchParagraph>Find your Pokemon: </SearchParagraph>
-        <input
+        <SearchInput
           className={"search-input"}
           type="text"
           onKeyPress={handleSearchInputKeyPress}
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder={"Search..."}
         />
-        <button
+        <SearchButton
           className={"search-btn"}
           onClick={() => props.history.push(`/pokemon/${search}`)}
         >
           Search
-        </button>
+        </SearchButton>
       </SearchWrapper>
       {ShowData()}
       {!_.isEmpty(pokemonList.data) && (
