@@ -18,4 +18,8 @@ export const NavigationLink = styled(NavLink)`
   border-radius: 20px;
   color: white;
   text-decoration: none;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 `;
