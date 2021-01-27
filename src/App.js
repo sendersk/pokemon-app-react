@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Switch, Route, NavLink, Redirect } from "react-router-dom";
-import PokemonList from "./containers/PokemonList";
+import PokemonList from "./containers/PokemonList/PokemonList";
 import Pokemon from "./containers/Pokemon/Pokemon";
 
 function App() {

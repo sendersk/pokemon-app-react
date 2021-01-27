@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";
-import { GetPokemonList } from "../actions/PokemonActions";
+import { GetPokemonList } from "../../actions/PokemonActions";
 import { Link } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 
