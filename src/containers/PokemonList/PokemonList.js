@@ -4,6 +4,8 @@ import _ from "lodash";
 import { GetPokemonList } from "../../actions/PokemonActions";
 import ReactPaginate from "react-paginate";
 import {ListWrapper, ListItem, ListLink} from "./styled"
+import {Container} from "../../common/Container/styled"
+import {SearchWrapper, SearchParagraph} from "../Search/styled"
 
 const PokemonList = (props) => {
   const [search, setSearch] = useState("");
@@ -52,9 +54,9 @@ const PokemonList = (props) => {
   };
 
   return (
-    <div className="container">
-      <div className={"search-wrapper"}>
-        <p className={"search-paragraph"}>Find your Pokemon: </p>
+    <Container>
+      <SearchWrapper>
+        <SearchParagraph>Find your Pokemon: </SearchParagraph>
         <input
           className={"search-input"}
           type="text"
@@ -68,7 +70,7 @@ const PokemonList = (props) => {
         >
           Search
         </button>
-      </div>
+      </SearchWrapper>
       {ShowData()}
       {!_.isEmpty(pokemonList.data) && (
         <ReactPaginate
@@ -79,7 +81,7 @@ const PokemonList = (props) => {
           containerClassName={"pagination"}
         />
       )}
-    </div>
+    </Container>
   );
 };
 
