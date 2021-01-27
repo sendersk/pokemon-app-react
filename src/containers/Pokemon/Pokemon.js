@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetPokemon } from "../../actions/PokemonActions";
 import _ from "lodash";
+import {Wrapper, Item} from "./styled"
 
 const Pokemon = (props) => {
   const pokemonName = props.match.params.pokemon;
@@ -16,13 +17,13 @@ const Pokemon = (props) => {
     if (!_.isEmpty(pokemonState.data[pokemonName])) {
       const pokeData = pokemonState.data[pokemonName];
       return (
-        <div className={"pokemon-wrapper"}>
-          <div className={"pokemon-item"}>
+        <Wrapper>
+          <Item>
             <h1>Sprites</h1>
             <img src={pokeData.sprites.front_default} alt="" />
             <img src={pokeData.sprites.back_default} alt="" />
-          </div>
-          <div className="pokemon-item">
+          </Item>
+          <Item>
             <h1>Stats</h1>
             {pokeData.stats.map(({ stat, base_stat }) => {
               return (
@@ -31,20 +32,20 @@ const Pokemon = (props) => {
                 </p>
               );
             })}
-          </div>
-          <div className="pokemon-item">
+          </Item>
+          <Item>
             <h1>Abilities</h1>
             {pokeData.abilities.map(({ ability }) => {
               return <p key={ability.name}>{ability.name}</p>;
             })}
-          </div>
-          <div className="pokemon-item">
+          </Item>
+          <Item>
             <h1>Type</h1>
             {pokeData.types.map(({ type }) => {
               return <p key={type.name}>{type.name}</p>;
             })}
-          </div>
-        </div>
+          </Item>
+        </Wrapper>
       );
     }
 
