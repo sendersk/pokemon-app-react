@@ -15,3 +15,9 @@ export const Item = styled.div`
   border: 3px solid royalblue;
   border-radius: 10px;
 `;
+
+export const PokemonWrapper = styled.div`
+  width: 90%;
+  margin: 20px auto 0;
+  height: 90vh;
+`
