@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";
 import { GetPokemonList } from "../../actions/PokemonActions";
-import { Link } from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import {ListWrapper, ListItem, ListLink} from "./styled"
 
 const PokemonList = (props) => {
   const [search, setSearch] = useState("");
@@ -25,16 +25,16 @@ const PokemonList = (props) => {
 
     if (!_.isEmpty(pokemonList.data)) {
       return (
-        <div className={"list-wrapper"}>
+        <ListWrapper>
           {pokemonList.data.map((el, id) => {
             return (
-              <div key={id} className={"pokemon-item"}>
+              <ListItem key={id}>
                 <p key={el.name}>{el.name}</p>
-                <Link to={`/pokemon/${el.name}`}>View</Link>
-              </div>
+                <ListLink to={`/pokemon/${el.name}`}>View</ListLink>
+              </ListItem>
             );
           })}
-        </div>
+        </ListWrapper>
       );
     }
 
