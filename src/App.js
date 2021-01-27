@@ -3,8 +3,8 @@ import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import PokemonList from "./containers/PokemonList/PokemonList";
 import Pokemon from "./containers/Pokemon/Pokemon";
-import {Navigation, NavigationLink} from "./common/Navigation/styled"
-import {Container} from "./common/Container/styled"
+import { Navigation, NavigationLink } from "./common/Navigation/styled";
+import { Container } from "./common/Container/styled";
 
 function App() {
   return (
