@@ -1,15 +1,16 @@
 import React from "react";
 import "./App.css";
-import { Switch, Route, NavLink, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import PokemonList from "./containers/PokemonList/PokemonList";
 import Pokemon from "./containers/Pokemon/Pokemon";
+import {Navigation, NavigationLink} from "./common/Navigation/styled"
 
 function App() {
   return (
     <div className="container">
-      <nav>
-        <NavLink to={"/"}>Home</NavLink>
-      </nav>
+      <Navigation>
+        <NavigationLink to={"/"}>Home</NavigationLink>
+      </Navigation>
       <Switch>
         <Route path={"/"} exact component={PokemonList} />
         <Route path={"/pokemon/:pokemon"} exact component={Pokemon} />
