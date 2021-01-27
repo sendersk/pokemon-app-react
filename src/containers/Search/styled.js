@@ -17,6 +17,12 @@ export const SearchParagraph = styled.p`
   color: #555;
   font-size: 30px;
   font-weight: 700;
+
+  @media (max-width: 768px){
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const SearchInput = styled.input`
