@@ -14,6 +14,10 @@ export const Item = styled.div`
   background-color: #fff;
   border: 3px solid royalblue;
   border-radius: 10px;
+
+  @media (max-width: 450px){
+    width: 100%;
+  }
 `;
 
 export const PokemonWrapper = styled.div`
@@ -30,4 +34,8 @@ export const PokemonHeader = styled.h1`
   display: flex;
   justify-content: center;
   text-transform: uppercase;
+
+  @media (max-width: 450px) {
+    margin-bottom: 15px;
+  }
 `;
