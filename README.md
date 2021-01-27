@@ -54,7 +54,6 @@ https://pokeapi.co/
 
 ## What I plan to do next: 
 
-- Rebuild project using styled components.
 - Add search filter.
 - Save data in localStorage.
 - Adapt project to Responsive Web Design.
