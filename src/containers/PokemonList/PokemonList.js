@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";
 import { GetPokemonList } from "../../actions/PokemonActions";
-import ReactPaginate from "react-paginate";
 import {ListWrapper, ListItem, ListLink} from "./styled"
 import {Container} from "../../common/Container/styled"
 import {SearchWrapper, SearchParagraph, SearchInput, SearchButton} from "../Search/styled"
@@ -13,11 +12,11 @@ const PokemonList = (props) => {
   const pokemonList = useSelector((state) => state.PokemonList);
 
   useEffect(() => {
-    FetchData(1);
+    FetchData();
   }, []);
 
-  const FetchData = (page = 1) => {
-    dispatch(GetPokemonList(page));
+  const FetchData = () => {
+    dispatch(GetPokemonList());
   };
 
   const ShowData = () => {
@@ -28,11 +27,17 @@ const PokemonList = (props) => {
     if (!_.isEmpty(pokemonList.data)) {
       return (
         <ListWrapper>
-          {pokemonList.data.map((el, id) => {
+          {pokemonList.data.filter((value)=>{
+            if(setSearch === "") {
+              return value
+            } else if (value.name.toLowerCase().includes(search.toLowerCase())) {
+              return value
+            }
+          }).map((value, id) => {
             return (
               <ListItem key={id}>
-                <p key={el.name}>{el.name}</p>
-                <ListLink to={`/pokemon/${el.name}`}>View</ListLink>
+                <p key={value.name}>{value.name}</p>
+                <ListLink to={`/pokemon/${value.name}`}>View</ListLink>
               </ListItem>
             );
           })}
@@ -72,15 +77,6 @@ const PokemonList = (props) => {
         </SearchButton>
       </SearchWrapper>
       {ShowData()}
-      {!_.isEmpty(pokemonList.data) && (
-        <ReactPaginate
-          pageCount={Math.ceil(pokemonList.count / 20)}
-          pageRangeDisplayed={2}
-          marginPagesDisplayed={1}
-          onPageChange={(data) => FetchData(data.selected + 1)}
-          containerClassName={"pagination"}
-        />
-      )}
     </Container>
   );
 };
