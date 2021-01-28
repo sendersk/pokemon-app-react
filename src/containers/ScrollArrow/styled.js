@@ -6,7 +6,7 @@ export const ScrollTop = styled(FaArrowCircleUp)`
   width: 100%;
   bottom: 20px;
   align-items: center;
-  height: 20px;
+  height: 50px;
   justify-content: center;
   z-index: 1000;
   cursor: pointer;
