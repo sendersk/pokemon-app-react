@@ -9,9 +9,9 @@
 - [API](#api)
 - [What I plan to do next: ](#what-i-plan-to-do-next)
 - [Available Scripts](#available-scripts)
-    - [npm start](#npm-start)
-    - [npm run build](#npm-run-build)
-    - [npm run eject](#npm-run-eject)
+  - [npm start](#npm-start)
+  - [npm run build](#npm-run-build)
+  - [npm run eject](#npm-run-eject)
 
 ## DEMO
 
@@ -21,15 +21,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-Application allows to browse pokemons based on external API, which is implemented with use of Axios. The application is constantly develop. New features described in [What I plan to do next](#what-i-plan-to-do-next) will appear soon.
+Application allows to browse pokemons based on external API, which is implemented with use of Axios. Application contains search filter. When you start typing the name of the pokemon, the list is filtered and as a result you get the names of the pokemon containing the entered phrase. New features described in [What I plan to do next](#what-i-plan-to-do-next) will appear soon.
 
 ## How to use
 
-1. Write the Pokemon name in Search field or choose one from list below by clicking **View**.
-2. Click on the button **Search**.
-3. If the pokemon you are looking for exists you will get the details.
-4. Details will be shown on the dedicated page.
-5. To go back to the home page click the **Home** button. 
+1. Write the Pokemon name in Search field.
+2. Click on the button **Search** or press **Enter** to search a Pokemon.
+3. You could also choose one from list below by clicking **View**.
+4. When you get bored of scrolling through the list, you can quickly return to the top of the page by clicking the arrow button.
+5. If the pokemon you are looking for exists you will get the details.
+6. Details will be shown on the dedicated page.
+7. To go back to the home page click the **Home** button.
 
 ## Technologies and methodologies used
 
@@ -37,7 +39,7 @@ Application allows to browse pokemons based on external API, which is implemente
 - create-react-app
 - Redux with react-redux
 - React Router Dom
-- React Paginate
+- React Icons
 - Redux Thunk
 - Axios
 - Lodash
@@ -52,11 +54,8 @@ Application allows to browse pokemons based on external API, which is implemente
 All the Pokemon data are coming from:
 https://pokeapi.co/
 
-## What I plan to do next: 
+## What I plan to do next:
 
-- Save data in localStorage.
-- Adapt project to Responsive Web Design.
-- Improve app appearance.
 - Create a live preview.
 
 ## Available Scripts
