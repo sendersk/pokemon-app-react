@@ -1,16 +1,15 @@
 import axios from "axios";
 
-export const GetPokemonList = (page) => async (dispatch) => {
+export const GetPokemonList = () => async (dispatch) => {
   try {
     dispatch({
       type: "POKEMON_LIST_LOADING",
     });
 
-    const perPage = 18;
-    const offset = page * perPage - perPage;
+    const limit = 1500;
 
     const res = await axios.get(
-      `https://pokeapi.co/api/v2/pokemon?limit=${perPage}&offset=${offset}`
+      `https://pokeapi.co/api/v2/pokemon?limit=${limit}`
     );
 
     dispatch({
