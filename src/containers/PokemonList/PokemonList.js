@@ -4,6 +4,7 @@ import _ from "lodash";
 import { GetPokemonList } from "../../actions/PokemonActions";
 import {ListWrapper, ListItem, ListLink} from "./styled"
 import {Container} from "../../common/Container/styled"
+import ScrollArrow from "../ScrollArrow/ScrollArrow"
 import {SearchWrapper, SearchParagraph, SearchInput, SearchButton} from "../Search/styled"
 
 const PokemonList = (props) => {
@@ -77,6 +78,7 @@ const PokemonList = (props) => {
         </SearchButton>
       </SearchWrapper>
       {ShowData()}
+      <ScrollArrow />
     </Container>
   );
 };
