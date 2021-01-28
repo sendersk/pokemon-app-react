@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
+  padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -23,7 +24,7 @@ export const Item = styled.div`
 export const PokemonWrapper = styled.div`
   width: 90%;
   margin: 20px auto 0;
-  height: 90vh;
+  min-height: 90vh;
 `;
 
 export const PokemonHeader = styled.h1`
