@@ -2,10 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import _ from "lodash";
 import { GetPokemonList } from "../../actions/PokemonActions";
-import {ListWrapper, ListItem, ListLink} from "./styled"
-import {Container} from "../../common/Container/styled"
-import ScrollArrow from "../ScrollArrow/ScrollArrow"
-import {SearchWrapper, SearchParagraph, SearchInput, SearchButton} from "../Search/styled"
+import { ListWrapper, ListItem, ListLink } from "./styled";
+import { Container } from "../../common/Container/styled";
+import ScrollArrow from "../ScrollArrow/ScrollArrow";
+import {
+  SearchWrapper,
+  SearchParagraph,
+  SearchInput,
+  SearchButton,
+} from "../Search/styled";
 
 const PokemonList = (props) => {
   const [search, setSearch] = useState("");
@@ -28,20 +33,24 @@ const PokemonList = (props) => {
     if (!_.isEmpty(pokemonList.data)) {
       return (
         <ListWrapper>
-          {pokemonList.data.filter((value)=>{
-            if(setSearch === "") {
-              return value
-            } else if (value.name.toLowerCase().includes(search.toLowerCase())) {
-              return value
-            }
-          }).map((value, id) => {
-            return (
-              <ListItem key={id}>
-                <p key={value.name}>{value.name}</p>
-                <ListLink to={`/pokemon/${value.name}`}>View</ListLink>
-              </ListItem>
-            );
-          })}
+          {pokemonList.data
+            .filter((value) => {
+              if (setSearch === "") {
+                return value;
+              } else if (
+                value.name.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return value;
+              }
+            })
+            .map((value, id) => {
+              return (
+                <ListItem key={id}>
+                  <p key={value.name}>{value.name}</p>
+                  <ListLink to={`/pokemon/${value.name}`}>View</ListLink>
+                </ListItem>
+              );
+            })}
         </ListWrapper>
       );
     }
