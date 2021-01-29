@@ -11,6 +11,7 @@ import {
   SearchInput,
   SearchButton,
 } from "../Search/styled";
+import Loader from "../Loader/Loader";
 
 const PokemonList = (props) => {
   const [search, setSearch] = useState("");
@@ -27,7 +28,7 @@ const PokemonList = (props) => {
 
   const ShowData = () => {
     if (pokemonList.loading) {
-      return <p>Loading...</p>;
+      return <Loader />;
     }
 
     if (!_.isEmpty(pokemonList.data)) {

@@ -4,6 +4,8 @@ import { GetPokemon } from "../../actions/PokemonActions";
 import _ from "lodash";
 import {Wrapper, Item, PokemonWrapper, PokemonHeader} from "./styled"
 
+import Loader from "../Loader/Loader"
+
 const Pokemon = (props) => {
   const pokemonName = props.match.params.pokemon;
   const dispatch = useDispatch();
@@ -50,7 +52,7 @@ const Pokemon = (props) => {
     }
 
     if (pokemonState.loading) {
-      return <p>Loading...</p>;
+      return <Loader />;
     }
 
     if (pokemonState.errorMsg !== "") {
