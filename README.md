@@ -8,7 +8,6 @@
 - [How to use](#how-to-use)
 - [Technologies and methodologies used](#technologies-and-methodologies-used)
 - [API](#api)
-- [What I plan to do next: ](#what-i-plan-to-do-next)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
   - [npm run build](#npm-run-build)
