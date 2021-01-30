@@ -13,7 +13,7 @@ export const ListWrapper = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 50px;
+    margin-top: 65px;
   }
 
   @media (max-width: 450px) {
