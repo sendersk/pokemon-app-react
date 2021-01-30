@@ -2,6 +2,7 @@
 
 ## Table of contents
 
+- [Live Preview](#live-preview)
 - [DEMO](#demo)
 - [Description](#description)
 - [How to use](#how-to-use)
@@ -13,6 +14,10 @@
   - [npm run build](#npm-run-build)
   - [npm run eject](#npm-run-eject)
 
+## Live Preview
+
+![pokemon-app-demo](https://user-images.githubusercontent.com/55362061/106355108-4b50de80-62f6-11eb-9714-04fe49963258.gif)
+
 ## DEMO
 
 https://sendersk.github.io/pokemon-app-react/
@@ -21,7 +26,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-Application allows to browse pokemons based on external API, which is implemented with use of Axios. Application contains search filter. When you start typing the name of the pokemon, the list is filtered and as a result you get the names of the pokemon containing the entered phrase. New features described in [What I plan to do next](#what-i-plan-to-do-next) will appear soon.
+Application allows to browse pokemons based on external API, which is implemented with use of Axios. Application contains search filter. When you start typing the name of the pokemon, the list is filtered and as a result you get the names of the pokemon containing the entered phrase.
 
 ## How to use
 
@@ -53,10 +58,6 @@ Application allows to browse pokemons based on external API, which is implemente
 
 All the Pokemon data are coming from:
 https://pokeapi.co/
-
-## What I plan to do next:
-
-- Create a live preview.
 
 ## Available Scripts
 
