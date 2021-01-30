@@ -1,11 +1,14 @@
 import React from "react";
+import {LoaderWrapper, LoaderParagraph} from "./styled"
+
 import { RotateCircleLoading } from "react-loadingg";
 
 function Loader() {
   return (
-    <div>
-      <RotateCircleLoading color="#ffffff" />
-    </div>
+    <LoaderWrapper>
+      <RotateCircleLoading color="#fff" />
+      <LoaderParagraph>Loading</LoaderParagraph>
+    </LoaderWrapper>
   );
 }
 
