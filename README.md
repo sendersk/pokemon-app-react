@@ -44,6 +44,7 @@ Application allows to browse pokemons based on external API, which is implemente
 - Redux with react-redux
 - React Router Dom
 - React Icons
+- React Loadingg
 - Redux Thunk
 - Axios
 - Lodash
