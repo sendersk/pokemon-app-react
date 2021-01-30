@@ -11,6 +11,7 @@ export const LoaderWrapper = styled.div`
 
 export const LoaderParagraph = styled.p`
     color: #fff;
-    font-size: 80px;
+    padding: 10px;
+    font-size: 70px;
     line-height: 60vh;
 `

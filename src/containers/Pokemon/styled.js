@@ -18,6 +18,11 @@ export const Item = styled.div`
 
   @media (max-width: 450px){
     width: 100%;
+
+    h1 {
+      font-size: 24px;
+      padding: 5px;
+    }
   }
 `;
 
@@ -38,5 +43,6 @@ export const PokemonHeader = styled.h1`
 
   @media (max-width: 450px) {
     margin-bottom: 15px;
+    font-size: 30px;
   }
 `;
