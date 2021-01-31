@@ -22,4 +22,12 @@ export const NavigationLink = styled(NavLink)`
   &:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
+
+  @media (max-width: 768px){
+    margin-right: 45px;
+  }
+
+  @media (max-width: 450px) {
+    margin-right: 20px;
+  }
 `;
