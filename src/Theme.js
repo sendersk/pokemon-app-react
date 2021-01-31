@@ -8,6 +8,7 @@ export const Theme = {
         white: "#ffffff",
         lightSkyBlue: "#87cefa",
         royalBlue: "#4169e1",
+        red: "#ff0324",
         black: "#000000",
         stoneColdGrey: "#555555",
         luckyGrey: "#777777",
