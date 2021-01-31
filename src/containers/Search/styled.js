@@ -14,7 +14,7 @@ export const SearchWrapper = styled.div`
 `;
 
 export const SearchParagraph = styled.p`
-  color: #555;
+  color: ${({theme}) => theme.color.stoneColdGrey};
   font-size: 30px;
   font-weight: 700;
 
@@ -29,7 +29,7 @@ export const SearchInput = styled.input`
   line-height: 1.5;
   font-size: 20px;
   padding: 5px;
-  border: 3px solid #777;
+  border: 3px solid ${({theme}) => theme.color.luckyGrey};
 
   @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}px) {
     width: 60%;
@@ -39,8 +39,8 @@ export const SearchInput = styled.input`
 
 export const SearchButton = styled.button`
   display: inline-block;
-  color: #fff;
-  background-color: royalblue;
+  color: ${({theme}) => theme.color.white};
+  background-color: ${({theme}) => theme.color.royalBlue};
   border: none;
   border-radius: 20px;
   font-size: 1em;

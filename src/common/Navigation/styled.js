@@ -7,16 +7,16 @@ export const Navigation = styled.nav`
   height: 60px;
   align-items: center;
   justify-content: flex-end;
-  background-color: royalblue;
+  background-color: ${({theme}) => theme.color.royalBlue};
 `;
 
 export const NavigationLink = styled(NavLink)`
   margin-right: 100px;
   font-size: 20px;
   padding: 10px;
-  border: 3px solid #fff;
+  border: 3px solid ${({theme}) => theme.color.white};
   border-radius: 20px;
-  color: white;
+  color: ${({theme}) => theme.color.white};
   text-decoration: none;
 
   &:hover {

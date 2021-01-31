@@ -10,7 +10,7 @@ export const LoaderWrapper = styled.div`
 `;
 
 export const LoaderParagraph = styled.p`
-  color: #fff;
+  color: ${({theme}) => theme.color.white};
   padding: 10px;
   font-size: 50px;
   line-height: 60vh;

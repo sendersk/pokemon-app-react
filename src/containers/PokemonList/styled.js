@@ -29,14 +29,14 @@ export const ListItem = styled.div`
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  color: royalblue;
-  background-color: #fff;
-  border: 2px solid royalblue;
+  color: ${({theme}) => theme.color.royalBlue};
+  background-color: ${({theme}) => theme.color.white};
+  border: 2px solid ${({theme}) => theme.color.royalBlue};
   padding: 10px;
   border-radius: 7px;
 `;
 
 export const ListLink = styled(Link)`
-  color: black;
+  color: ${({theme}) => theme.color.black};
   text-decoration: none;
 `;
