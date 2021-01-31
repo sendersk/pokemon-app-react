@@ -30,6 +30,11 @@ export const SearchInput = styled.input`
   font-size: 20px;
   padding: 5px;
   border: 3px solid #777;
+
+  @media (max-width: 450px) {
+    width: 60%;
+    font-size: 16px;
+  }
 `;
 
 export const SearchButton = styled.button`
@@ -43,4 +48,8 @@ export const SearchButton = styled.button`
   padding: 10px;
   margin: 10px 0;
   border-radius: 10px;
+
+  @media (max-width: 450px) {
+    font-size: 16px;
+  }
 `;
