@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { GetPokemon } from "../../actions/PokemonActions";
 import _ from "lodash";
 import {Wrapper, Item, PokemonWrapper, PokemonHeader} from "./styled"
-
+import Alert from "../Alert/Alert"
+import Error from "../Error/Error"
 import Loader from "../Loader/Loader"
 
 const Pokemon = (props) => {
@@ -56,10 +57,10 @@ const Pokemon = (props) => {
     }
 
     if (pokemonState.errorMsg !== "") {
-      return <p>{pokemonState.errorMsg}</p>;
+      return <Alert />;
     }
 
-    return <p>error getting pokemon</p>;
+    return <Error />;
   };
 
   return (
