@@ -20,7 +20,8 @@ export const NavigationLink = styled(NavLink)`
   text-decoration: none;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: ${({theme}) => theme.color.royalBlue};
+    filter: brightness(130%);
   }
 
   @media (max-width: ${({theme}) => theme.breakpoint.screenMedium}px){
