@@ -15,7 +15,7 @@ export const LoaderParagraph = styled.p`
   font-size: 50px;
   line-height: 60vh;
 
-  @media (max-width: 450px){
+  @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}px){
       font-size: 30px;
   }
 `;

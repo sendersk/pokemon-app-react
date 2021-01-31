@@ -11,12 +11,12 @@ export const ListWrapper = styled.div`
   gap: 1rem;
   padding: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({theme}) => theme.breakpoint.screenMedium}px) {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 65px;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;

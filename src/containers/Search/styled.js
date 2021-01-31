@@ -18,7 +18,7 @@ export const SearchParagraph = styled.p`
   font-size: 30px;
   font-weight: 700;
 
-  @media (max-width: 768px){
+  @media (max-width: ${({theme}) => theme.breakpoint.screenMedium}px){
     width: 100%;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@ export const SearchInput = styled.input`
   padding: 5px;
   border: 3px solid #777;
 
-  @media (max-width: 450px) {
+  @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}px) {
     width: 60%;
     font-size: 16px;
   }
@@ -49,7 +49,7 @@ export const SearchButton = styled.button`
   margin: 10px 0;
   border-radius: 10px;
 
-  @media (max-width: 450px) {
+  @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}px) {
     font-size: 16px;
   }
 `;

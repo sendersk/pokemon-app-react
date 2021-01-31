@@ -16,7 +16,7 @@ export const Item = styled.div`
   border: 3px solid royalblue;
   border-radius: 10px;
 
-  @media (max-width: 450px){
+  @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}px){
     width: 100%;
 
     h1 {
@@ -41,7 +41,7 @@ export const PokemonHeader = styled.h1`
   justify-content: center;
   text-transform: uppercase;
 
-  @media (max-width: 450px) {
+  @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}px) {
     margin-bottom: 15px;
     font-size: 30px;
   }

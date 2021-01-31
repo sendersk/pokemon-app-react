@@ -23,11 +23,11 @@ export const NavigationLink = styled(NavLink)`
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  @media (max-width: 768px){
+  @media (max-width: ${({theme}) => theme.breakpoint.screenMedium}px){
     margin-right: 45px;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}px) {
     margin-right: 20px;
   }
 `;
