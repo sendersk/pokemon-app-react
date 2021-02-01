@@ -15,7 +15,7 @@
 
 ## Live Preview
 
-![pokemon-app-demo](https://user-images.githubusercontent.com/55362061/106355108-4b50de80-62f6-11eb-9714-04fe49963258.gif)
+![pokemon-app-demo](https://user-images.githubusercontent.com/55362061/106516437-4eef8b80-64d7-11eb-9d33-3a305da7e7a2.gif)
 
 ## DEMO
 
