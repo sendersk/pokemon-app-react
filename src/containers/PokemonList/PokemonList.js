@@ -19,12 +19,11 @@ const PokemonList = (props) => {
   const pokemonList = useSelector((state) => state.PokemonList);
 
   useEffect(() => {
-    FetchData();
-  }, []);
-
-  const FetchData = () => {
-    dispatch(GetPokemonList());
-  };
+    function FetchData(){
+      dispatch(GetPokemonList());
+    }
+    FetchData()
+  }, [dispatch])
 
   const ShowData = () => {
     if (pokemonList.loading) {
