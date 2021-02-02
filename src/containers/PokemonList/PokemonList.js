@@ -41,7 +41,7 @@ const PokemonList = (props) => {
                 value.name.toLowerCase().includes(search.toLowerCase())
               ) {
                 return value;
-              }
+              } else {return value}
             })
             .map((value, id) => {
               return (
