@@ -19,11 +19,11 @@ const PokemonList = (props) => {
   const pokemonList = useSelector((state) => state.PokemonList);
 
   useEffect(() => {
-    function FetchData(){
+    function FetchData() {
       dispatch(GetPokemonList());
     }
-    FetchData()
-  }, [dispatch])
+    FetchData();
+  }, [dispatch]);
 
   const ShowData = () => {
     if (pokemonList.loading) {
@@ -41,7 +41,9 @@ const PokemonList = (props) => {
                 value.name.toLowerCase().includes(search.toLowerCase())
               ) {
                 return value;
-              } else {return value}
+              } else {
+                return 0;
+              }
             })
             .map((value, id) => {
               return (
