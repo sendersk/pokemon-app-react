@@ -76,14 +76,12 @@ const PokemonList = (props) => {
       <SearchWrapper>
         <SearchParagraph>Find your Pokemon: </SearchParagraph>
         <SearchInput
-          className={"search-input"}
           type="text"
           onKeyPress={handleSearchInputKeyPress}
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder={"Search..."}
         />
         <SearchButton
-          className={"search-btn"}
           onClick={() => props.history.push(`/pokemon/${search}`)}
         >
           Search
