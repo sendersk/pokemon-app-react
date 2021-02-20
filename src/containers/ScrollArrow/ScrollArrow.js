@@ -25,7 +25,6 @@ const ScrollArrow = () => {
 
   return (
     <ScrollTop
-      className="scrollTop"
       onClick={scrollTop}
       style={{display: showScroll ? "flex" : "none" }}
     />
