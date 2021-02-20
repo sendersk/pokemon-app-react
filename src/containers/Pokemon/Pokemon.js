@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetPokemon } from "../../actions/PokemonActions";
 import _ from "lodash";
-import {Wrapper, Item, PokemonWrapper, PokemonHeader} from "./styled"
-import Alert from "../Alert/Alert"
-import Error from "../Error/Error"
-import Loader from "../Loader/Loader"
+import { Wrapper, Item, PokemonWrapper, PokemonHeader } from "./styled";
+import Alert from "../Alert/Alert";
+import Loader from "../Loader/Loader";
 
 const Pokemon = (props) => {
   const pokemonName = props.match.params.pokemon;
@@ -57,10 +56,10 @@ const Pokemon = (props) => {
     }
 
     if (pokemonState.errorMsg !== "") {
-      return <Alert content="Oops! Something go wrong! Back to Pokemon List and try choose another one." />;
-    } 
-
-    return <Error content="Error getting pokemon!" />;
+      return (
+        <Alert content="Oops! Something go wrong! Back to Pokemon List and try choose another one." />
+      );
+    }
   };
 
   return (
