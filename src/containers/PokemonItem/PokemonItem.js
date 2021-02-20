@@ -1,10 +1,12 @@
 import React from 'react'
+import {Wrapper} from "./styled"
 
-function PokemonItem() {
+function PokemonItem({title, content}) {
     return (
-        <div>
-            
-        </div>
+        <Wrapper>
+            <h1>{title}</h1>
+            <p>{content}</p>
+        </Wrapper>
     )
 }
 
