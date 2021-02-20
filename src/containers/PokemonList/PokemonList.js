@@ -8,11 +8,11 @@ import ScrollArrow from "../ScrollArrow/ScrollArrow";
 import {
   SearchWrapper,
   SearchParagraph,
-  SearchInput,
-  SearchButton,
+  SearchInput
 } from "../Search/styled";
 import Loader from "../Loader/Loader";
 import Alert from "../Alert/Alert"
+import Button from "../../common/Button/Button" 
 
 const PokemonList = (props) => {
   const [search, setSearch] = useState("");
@@ -81,11 +81,10 @@ const PokemonList = (props) => {
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder={"Search..."}
         />
-        <SearchButton
+        <Button
+          content="Search"
           onClick={() => props.history.push(`/pokemon/${search}`)}
-        >
-          Search
-        </SearchButton>
+        />
       </SearchWrapper>
       {ShowData()}
       <ScrollArrow />
