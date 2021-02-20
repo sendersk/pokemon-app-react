@@ -4,7 +4,7 @@ import { StyledButton } from "./styled";
 function Button({ content }) {
   return (
     <StyledButton>
-      <p>{content}</p>
+      {content}
     </StyledButton>
   );
 }
