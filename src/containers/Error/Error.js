@@ -1,10 +1,10 @@
 import React from "react";
 import { ErrorWrapper, ErrorParagraph } from "./styled";
 
-function Error() {
+function Error({content}) {
   return (
     <ErrorWrapper>
-      <ErrorParagraph>Error getting pokemon!</ErrorParagraph>
+      <ErrorParagraph>{content}</ErrorParagraph>
     </ErrorWrapper>
   );
 }

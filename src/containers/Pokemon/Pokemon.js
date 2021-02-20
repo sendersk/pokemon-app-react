@@ -57,10 +57,10 @@ const Pokemon = (props) => {
     }
 
     if (pokemonState.errorMsg !== "") {
-      return <Alert />;
-    }
+      return <Alert content="Oops! Something go wrong! Back to Pokemon List and try choose another one." />;
+    } 
 
-    return <Error />;
+    return <Error content="Error getting pokemon!" />;
   };
 
   return (

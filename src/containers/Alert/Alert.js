@@ -1,10 +1,10 @@
 import React from "react";
 import { AlertWrapper, AlertParagraph } from "./styled";
 
-function Alert() {
+function Alert({content}) {
   return (
     <AlertWrapper>
-      <AlertParagraph>Oops! Something go wrong! Back to Pokemon List and try choose another one.</AlertParagraph>
+      <AlertParagraph>{content}</AlertParagraph>
     </AlertWrapper>
   );
 }
