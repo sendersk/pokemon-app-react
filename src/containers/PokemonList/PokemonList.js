@@ -12,6 +12,7 @@ import {
   SearchButton,
 } from "../Search/styled";
 import Loader from "../Loader/Loader";
+import Alert from "../Alert/Alert"
 
 const PokemonList = (props) => {
   const [search, setSearch] = useState("");
@@ -58,10 +59,10 @@ const PokemonList = (props) => {
     }
 
     if (pokemonList.errorMsg !== "") {
-      return <p>{pokemonList.errorMsg}</p>;
+      return (
+        <Alert content="Oops! Something go wrong!" />
+      );
     }
-
-    return <p>Unable to get data</p>;
   };
 
   const handleSearchInputKeyPress = (e) => {
