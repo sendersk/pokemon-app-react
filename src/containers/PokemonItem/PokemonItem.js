@@ -5,7 +5,7 @@ function PokemonItem({title, content}) {
     return (
         <Wrapper>
             <h1>{title}</h1>
-            <p>{content}</p>
+            <div>{content}</div>
         </Wrapper>
     )
 }
