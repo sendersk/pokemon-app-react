@@ -11,6 +11,12 @@ export const Button = styled.button`
   padding: 10px;
   margin: 10px 0;
 
+  &:focus {
+    outline: none;
+  }
+
+  
+
   @media (max-width: ${({ theme }) => theme.breakpoint.screenSmall}px) {
     font-size: 16px;
   }
