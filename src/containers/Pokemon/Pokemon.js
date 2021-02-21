@@ -7,8 +7,8 @@ import Alert from "../Alert/Alert";
 import Loader from "../Loader/Loader";
 import PokemonItem from "../PokemonItem/PokemonItem";
 
-const Pokemon = (props) => {
-  const pokemonName = props.match.params.pokemon;
+const Pokemon = ({match}) => {
+  const pokemonName = match.params.pokemon;
   const dispatch = useDispatch();
   const pokemonState = useSelector((state) => state.Pokemon);
 
