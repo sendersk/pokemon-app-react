@@ -6,6 +6,7 @@ export const Theme = {
 
     color: {
         white: "#ffffff",
+        alto: "#dddddd",
         lightSkyBlue: "#87cefa",
         royalBlue: "#4169e1",
         red: "#ff0324",
