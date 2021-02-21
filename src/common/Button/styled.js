@@ -15,7 +15,9 @@ export const Button = styled.button`
     outline: none;
   }
 
-  
+  &:hover {
+    filter: brightness(120%);
+  }  
 
   @media (max-width: ${({ theme }) => theme.breakpoint.screenSmall}px) {
     font-size: 16px;
