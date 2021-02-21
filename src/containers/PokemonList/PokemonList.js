@@ -5,14 +5,10 @@ import { GetPokemonList } from "../../actions/PokemonActions";
 import { ListWrapper, ListItem, ListLink } from "./styled";
 import { Container } from "../../common/Container/styled";
 import ScrollArrow from "../ScrollArrow/ScrollArrow";
-import {
-  SearchWrapper,
-  SearchParagraph,
-  SearchInput
-} from "../Search/styled";
+import { SearchWrapper, SearchParagraph, SearchInput } from "../Search/styled";
 import Loader from "../Loader/Loader";
-import Alert from "../Alert/Alert"
-import Button from "../../common/Button/Button" 
+import Alert from "../Alert/Alert";
+import { Button } from "../../common/Button/styled";
 
 const PokemonList = (props) => {
   const [search, setSearch] = useState("");
@@ -59,9 +55,7 @@ const PokemonList = (props) => {
     }
 
     if (pokemonList.errorMsg !== "") {
-      return (
-        <Alert content="Oops! Something go wrong!" />
-      );
+      return <Alert content="Oops! Something go wrong!" />;
     }
   };
 
@@ -81,10 +75,9 @@ const PokemonList = (props) => {
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder={"Search..."}
         />
-        <Button
-          content="Search"
-          onClick={() => props.history.push(`/pokemon/${search}`)}
-        />
+        <Button onClick={() => props.history.push(`/pokemon/${search}`)}>
+          Search
+        </Button>
       </SearchWrapper>
       {ShowData()}
       <ScrollArrow />

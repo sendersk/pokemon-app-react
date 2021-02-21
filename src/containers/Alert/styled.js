@@ -14,9 +14,9 @@ export const AlertWrapper = styled.div`
 
 export const AlertParagraph = styled.p`
     color: ${({theme}) => theme.color.red};
-    font-size: 32px;
+    font-size: 40px;
 
-    @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}){
-        font-size: 18px;
+    @media (max-width: ${({theme}) => theme.breakpoint.screenSmall}px){
+        font-size: 30px;
     }
 `
