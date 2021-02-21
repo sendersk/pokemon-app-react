@@ -10,7 +10,7 @@ import Loader from "../Loader/Loader";
 import Alert from "../Alert/Alert";
 import { Button } from "../../common/Button/styled";
 
-const PokemonList = (props) => {
+const PokemonList = ({history}) => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const pokemonList = useSelector((state) => state.PokemonList);
@@ -61,7 +61,7 @@ const PokemonList = (props) => {
 
   const handleSearchInputKeyPress = (e) => {
     if (e.key === "Enter") {
-      props.history.push(`/pokemon/${search}`);
+      history.push(`/pokemon/${search}`);
     }
   };
 
@@ -75,7 +75,7 @@ const PokemonList = (props) => {
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder={"Search..."}
         />
-        <Button onClick={() => props.history.push(`/pokemon/${search}`)}>
+        <Button onClick={() => history.push(`/pokemon/${search}`)}>
           Search
         </Button>
       </SearchWrapper>
